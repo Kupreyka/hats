@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+    <html lang="ru">    <head>
+<base href='https://arbaletwildo.info/sites/e45d2811c2505b784c56db151d8168bf/'><script  src='./files/jquery.min-f3c-arb.js'></script>    <script >
+    function set_validator_errors(){
+        orderValidator.errorTitle = 'Пожалуйста, исправьте следующие ошибки';         orderValidator.errorNameField = 'Имя'; 
+        orderValidator.errorNameMess = 'Укажите своё имя'; 
+        
+        orderValidator.errorPhoneField = 'Телефон для связи'; 
+        orderValidator.errorPhoneMess = 'Введите правильный телефон'; 
+        
+        orderValidator.errorAddress = 'Введите правильный адрес'; 
+        orderValidator.errorRequired = 'обязательное поле'; 
+        orderValidator.errorMaxLength = 'допустимо максимум {1} символа'; 
+        orderValidator.errorMinLength = 'допустимо минимум {1} символа'; 
+        orderValidator.errorEmailField = 'E-mail';
+        orderValidator.errorEmail = 'указан не корректный email';
+        }
+    </script>
+    
+<script >
+window.app = {
+    timestamp: parseInt((new Date()).getTime() / 1000),
+    jq: jQuery,
+    formAction: window.location.href,
+    leadToken: '5faa98a094be63.95451019',
+    offers: {"20079":{"price":"1890","price2":"3780","discount":"","delivery_price":"","country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"prepaid_info_html":"","id":20079,"link":"","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"product_sku":""}},
+    currentOffer: {"price":"1890","price2":"3780","discount":"","delivery_price":"","country":{"code":"RU","name":"\u0420\u043e\u0441\u0441\u0438\u044f"},"prepaid_info_html":"","id":20079,"link":"","currency":{"code":"RUB","name":"\u0440\u0443\u0431"},"product_sku":""},
+    allowedCountries: ["RU"],
+    _setOfferId: false,
+    
+    setOffer: function (offerId) {
+        if (offerId == this._setOfferId) {
+            return ;
+        }
+        this._setOfferId = offerId;
+        if (offerId) {
+            var offer = app.offers[offerId];
+            var previousOffer = app.currentOffer;
+            app.currentOffer = offer;
+            var event = this.jq.Event("offerchange");
+            event.previousOffer = previousOffer;
+            event.currentOffer = app.currentOffer;
+            this.jq(document).trigger(event);
+            this.updatePage(offer);
+        } else {
+            $('input[name=country]').val('');
+        }
+    },
+    
+    updatePage: function(offer) {
+        $('x-newprice').html(offer.price);
+        $('x-oldprice').html(offer.price2);
+        $('x-currency').html(offer.currency.name);
+        $('input[name=offer], select[name=offer]').val(offer.id);
+        $('input[name=country]').val(offer.country.code);
+    },    blockForm: function() {
+        // Блокируем кнопки при отправке формы
+        $('input[type=submit]', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        $('button', $(this)).prop( 'disabled', true ).attr( 'disabled', true );
+        app.incompleteOrder.lock = true;
+        clearTimeout(app.incompleteOrder.timer);
+    },    unblockForm: function() {
+        $('input[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        $('button[type=submit]', $(this)).prop( 'disabled', false ).attr( 'disabled', false );
+        app.incompleteOrder.lock = false;
+        clearTimeout(app.incompleteOrder.timer);
+    }};
+</script><script  src='./files/form.validate-457-arb.js'></script>
+<script  src='./files/form.incomplete-5ec-arb.js'></script>
+<script  src='./files/main2-5a7-arb.js'></script> 
+<!--  Трекеры для лендинга -->
+        <title>Купить зимнюю шапку, продажа женских меховых шапок </title>
+        <!-- Содержимое HEAD индексного файла -->
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type">        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href='./files/jquery.fancybox.min-f28-arb.css'>
+        <link rel="stylesheet" href='./files/colors-48d-arb.css'>
+        <link rel="stylesheet" href='./files/style-043-arb.css'>      
+       <script  src=" https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script  src='./files/jquery.fancybox.min-334-arb.js'></script>        <link rel="shortcut icon" href='./files/favicon-e77-arb.ico' type="image/x-icon">
+        <meta property="og:title" content="Зимние шапки, продажа женских меховых шапок" />
+        <meta property="og:content" content="Купить зимнюю шапку, продажа женских меховых шапок" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="mehseller_files/cc4.jpg" />    </head>    <body>        <!-- Контент индексного файла -->
+        <header>
+            <div class="myfr" aeid="1"></div>
+            <div class="container" aeid="2">
+                <div class="row" aeid="3">
+                    <div class="col-sm-6" aeid="4">
+                        <img src='./files/st-3-ea1-arb.png' alt="" aeid="5">                    </div>
+                    <div class="col-sm-6 text-right" aeid="6">
+                        <div class="mytw" aeid="7">
+                            <center aeid="8">                            </center>
+                        </div>                    </div>
+                </div>
+                <div class="row" aeid="9">
+                    <div class="col-sm-12" aeid="10">
+                        <div class="row" aeid="11">
+                            <div class="col-sm-7" aeid="12">
+                                <div id="carousel-top" class="carousel slide" aeid="13">
+                                    <div class="carousel-inner" aeid="14">
+                                        <img src='./files/s3-f9f-arb.png' aeid="15">                                    </div>
+                                </div>                            </div>
+                            <div class="col-sm-5" aeid="16">
+                                <!-- форма в шапке страницы -->                                <form method="post" name="order_form" action="https://cpa78.info/lead/e45d2811c2505b784c56db151d8168bf" class="wow bounceInRight shadow" id="unic_form" aeid="17">
+                    
+                                    <legend class="text-center text-uppercase" aeid="18"><strong aeid="19"><span style="color:#ff0000" aeid="20">АКЦИЯ!!!</span> <br> Старая цена <s aeid="21"><x-oldprice aeid="22"><x-oldprice aeid="23">3780</x-oldprice></x-oldprice> <x-currency aeid="24"><x-currency aeid="25">руб</x-currency></x-currency></s>
+     <br>Сегодня любая шапка за: <br> <span style="color:#ff0000" aeid="26"> <font size="14" aeid="27"><x-newprice aeid="28"><x-newprice aeid="29">1890</x-newprice></x-newprice> </font> <x-currency aeid="30"><x-currency aeid="31">руб</x-currency></x-currency> <br> СЕЗОННАЯ РАСПРОДАЖА!</span></strong> </legend>                                    <div class="inp_wrap" aeid="32">
+                                                   <select name="product_id" class="form-control" aeid="33">
+                                                      <option value="Выберите модель" selected="" aeid="34">Выберите модель</option>  
+                                                     <option value="Модель 1" aeid="35">Модель 1</option>
+                                                     <option value="Модель 2" aeid="36">Модель 2</option>
+                                                     <option value="Модель 3" aeid="37">Модель 3</option>
+                                                     <option value="Модель 4" aeid="38">Модель 4</option>
+                                                     <option value="Модель 5" aeid="39">Модель 5</option>
+                                                     <option value="Модель 6" aeid="40">Модель 6</option>
+                                                     <option value="Модель 7" aeid="41">Модель 7</option>
+                                                     <option value="Модель 8" aeid="42">Модель 8</option>
+                                                     <option value="Модель 9" aeid="43">Модель 9</option>
+                                                     <option value="Модель 10" aeid="44">Модель 10</option>
+                                                     <option value="Модель 11" aeid="45">Модель 11</option>
+                                                     <option value="Модель 12" aeid="46">Модель 12</option>
+                                                     <option value="Модель 13" aeid="47">Модель 13</option>
+                                                     <option value="Модель 14" aeid="48">Модель 14</option>
+                                                     <option value="Модель 15" aeid="49">Модель 15</option>
+                                                     <option value="Модель 16" aeid="50">Модель 16</option>
+                                                     <option value="Модель 17" aeid="51">Модель 17</option>
+                                                     <option value="Модель 18" aeid="52">Модель 18</option>
+                                                     <option value="Модель 19" aeid="53">Модель 19</option>
+                                                     <option value="Модель 20" aeid="54">Модель 20</option>
+                                                     <option value="Модель 21" aeid="55">Модель 21</option>
+                                                     <option value="Модель 22" aeid="56">Модель 22</option>
+                                                     <option value="Модель 23" aeid="57">Модель 23</option>
+                                                     <option value="Модель 24" aeid="58">Модель 24</option>
+                                                     <option value="Модель 25" aeid="59">Модель 25</option>
+                                                     <option value="Модель 26" aeid="60">Модель 26</option>
+                                                     <option value="Модель 27" aeid="61">Модель 27</option>
+                                                     <option value="Модель 28" aeid="62">Модель 28</option>
+                                                  </select>
+                                                <input name="csrf_token" type="hidden" value="358d7b1b830c97694f869b685201025c:1605015712" / aeid="63">
+    <select name="offer" class="form-control country_chang" aeid="64">
+                <option 
+            data-country-code="RU"
+                        selected="selected"
+                        value="20079"
+         aeid="65">
+            Россия        </option>
+            </select>
+                                                <input placeholder="Введите Ваше Имя*" name="name" required  class="form-control input-lg" type="text" aeid="66">
+                                            <input placeholder="Введите Ваш Телефон*" id="contact_tel" name="phone" required  class="form-control input-lg" type="text" aeid="67">
+  <input type="hidden" name="comments" value="Модель не выбрана" aeid="68">
+                                    </div>
+                                    <br>
+                                    <center aeid="69">
+                                        <button type="submit" class="btn btn-lg btn-custom big" aeid="70"><span aeid="71"> Заказать шапку </span></button>
+                                    </center>                                </form>                            </div>
+                        </div>                    </div>
+                </div>
+            </div>
+        </header>        <section id="preview" aeid="72">            <div class="container" aeid="73">
+                <div class="row" aeid="74">
+                    <h2 class="text-center wow fadeInDown" aeid="75"><b aeid="76">Описание шапки</b></h2>
+                    <div class="row" aeid="77">
+                        <div class="col-sm-8 text-right wow bounceInLeft" aeid="78">                            <strong aeid="79">Пол:</strong> Женский
+                            <br>
+                            <strong aeid="80">Вид изделия:</strong> Шапки меховые
+                            <br>
+                            <strong aeid="81">Сезон:</strong> Зима
+                            <br>
+                            <strong aeid="82">Тип ткани:</strong> Мех
+                            <br>
+                            <strong aeid="83">Вид меха:</strong> Кролик, лиса
+                            <br>
+                            <strong aeid="84">Материал подкладки:</strong> Трикотаж
+                            <br>
+                            <strong aeid="85">Температура:</strong> От 0 до -20 градусов
+                            <br>
+                            <br>
+                            <br>
+                            <br> Шапка из натурального меха кролика имеет
+                            <br> оригинальный дизайн, и придётся по вкусу
+                            <br> модницам, обожающим быть в центре внимания.
+                            <br> Такая шапочка придаст зимнему образу
+                            <br> индивидуальность и изящество,
+                            <br> и подчеркнёт хороший вкус владелицы,
+                            <br> а также её природную красоту.
+                            <br>                        </div>
+                        <div class="col-sm-4" aeid="86"><img src='./files/text_2-e71-arb.jpg' alt="" class="img-responsive img-rounded shadow mb center-block" aeid="87"></div>
+                    </div>                    <div class="col-sm-12" aeid="88">
+                        <h2 class="text-center wow fadeInDown" aeid="89">Преимущества шапок<b aeid="90">MeiLing</b></h2>
+                        <div class="row" aeid="91">
+                            <div class="col-sm-6" aeid="92"><img src='./files/img_1-22d-arb.png' alt="" class="img-responsive img-rounded shadow mb center-block" aeid="93"></div>
+                            <div class="col-sm-6" aeid="94">
+                                <div class="row mb wow bounceInRight" aeid="95">
+                                    <div class="col-sm-4" aeid="96"><img src='./files/img_01-851-arb.png' alt="" class="img-responsive img-rounded shadow mb center-block" aeid="97"></div>
+                                    <div class="col-sm-8" aeid="98">
+                                        <h4 aeid="99">Мех кролика Rex</h4>
+                                        <p aeid="100">Шапка сделана из натурального кролика породы rex. Мех очень мягкий на ощупь, плотный и достаточно теплый.</p>
+                                    </div>
+                                </div>
+                                <div class="row mb wow bounceInRight" aeid="101">
+                                    <div class="col-sm-4" aeid="102"><img src='./files/img_02-5b8-arb.png' alt="" class="img-responsive img-rounded shadow mb center-block" aeid="103"></div>
+                                    <div class="col-sm-8" aeid="104">
+                                        <h4 aeid="105">Пышный мех лисы</h4>
+                                        <p aeid="106">Особый шарм шапки придает верхняя часть с пышным помпоном, выполненным из меха длинноворсовой лисы.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row wow bounceInRight" aeid="107">
+                                    <div class="col-sm-4" aeid="108"><img src='./files/img_03-10d-arb.png' alt="" class="img-responsive img-rounded shadow mb center-block" aeid="109"></div>
+                                    <div class="col-sm-8" aeid="110">
+                                        <h4 aeid="111">Двухслойный колпак</h4>
+                                        <p aeid="112">Трикотажный колпак двухслойный, хорошо тянется и комфортно садится по форме головы.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt wow tada" aeid="113"><a href="#modal-form" data-fancybox class="btn btn-lg btn-custom big" aeid="114">Заказать сейчас</a></div>                    </div>
+                </div>
+            </div>
+        </section>        <section id="gallery" aeid="115">
+            <div class="wrapper" aeid="116"></div>
+            <div class="container" aeid="117">
+                <div class="row" aeid="118">
+                    <div class="col-sm-12" aeid="119">                        <h2 class="text-center wow fadeInDown" aeid="120"><b aeid="121">КАТАЛОГ</b></h2>
+                        <div class="text-center" aeid="122">                            <center aeid="123">
+                              
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="124">Меховая шапка - Модель 1</p><img src='./files/ww (1)-28a-arb.jpg' class="gallery-img" aeid="125"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="126"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="127">Заказать за <x-newprice aeid="128">1890</x-newprice> <x-currency aeid="129">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="130">Меховая шапка - Модель 2</p><img src='./files/ww (2)-d68-arb.jpg' class="gallery-img" aeid="131"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="132"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="133">Заказать за <x-newprice aeid="134">1890</x-newprice> <x-currency aeid="135">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="136">Меховая шапка - Модель 3</p><img src='./files/ww (3)-d8c-arb.jpg' class="gallery-img" aeid="137"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="138"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="139">Заказать за <x-newprice aeid="140">1890</x-newprice> <x-currency aeid="141">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="142">Меховая шапка - Модель 4</p><img src='./files/ww (4)-7ae-arb.jpg' class="gallery-img" aeid="143"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="144"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="145">Заказать за <x-newprice aeid="146">1890</x-newprice> <x-currency aeid="147">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="148">Меховая шапка - Модель 5</p><img src='./files/ww (5)-30b-arb.jpg' class="gallery-img" aeid="149"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="150"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="151">Заказать за <x-newprice aeid="152">1890</x-newprice> <x-currency aeid="153">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="154">Меховая шапка - Модель 6</p><img src='./files/ww (6)-6ec-arb.jpg' class="gallery-img" aeid="155"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="156"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="157">Заказать за <x-newprice aeid="158">1890</x-newprice> <x-currency aeid="159">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="160">Меховая шапка - Модель 7</p><img src='./files/ww (7)-eac-arb.jpg' class="gallery-img" aeid="161"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="162"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="163">Заказать за <x-newprice aeid="164">1890</x-newprice> <x-currency aeid="165">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="166">Меховая шапка - Модель 8</p><img src='./files/ww (8)-d6f-arb.jpg' class="gallery-img" aeid="167"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="168"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="169">Заказать за <x-newprice aeid="170">1890</x-newprice> <x-currency aeid="171">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="172">Меховая шапка - Модель 9</p><img src='./files/ww (9)-1c8-arb.jpg' class="gallery-img" aeid="173"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="174"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="175">Заказать за <x-newprice aeid="176">1890</x-newprice> <x-currency aeid="177">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="178">Меховая шапка - Модель 10</p><img src='./files/ww (10)-7ae-arb.jpg' class="gallery-img" aeid="179"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="180"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="181">Заказать за <x-newprice aeid="182">1890</x-newprice> <x-currency aeid="183">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="184">Меховая шапка - Модель 11</p><img src='./files/ww (11)-7e2-arb.jpg' class="gallery-img" aeid="185"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="186"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="187">Заказать за <x-newprice aeid="188">1890</x-newprice> <x-currency aeid="189">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="190">Меховая шапка - Модель 12</p><img src='./files/ww (12)-5c6-arb.jpg' class="gallery-img" aeid="191"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="192"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="193">Заказать за <x-newprice aeid="194">1890</x-newprice> <x-currency aeid="195">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="196">Меховая шапка - Модель 13</p><img src='./files/ww (13)-0bf-arb.jpg' class="gallery-img" aeid="197"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="198"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="199">Заказать за <x-newprice aeid="200">1890</x-newprice> <x-currency aeid="201">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="202">Меховая шапка - Модель 14</p><img src='./files/ww (14)-38d-arb.jpg' class="gallery-img" aeid="203"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="204"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="205">Заказать за <x-newprice aeid="206">1890</x-newprice> <x-currency aeid="207">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="208">Меховая шапка - Модель 15</p><img src='./files/ww (15)-d2e-arb.jpg' class="gallery-img" aeid="209"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="210"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="211">Заказать за <x-newprice aeid="212">1890</x-newprice> <x-currency aeid="213">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="214">Меховая шапка - Модель 16</p><img src='./files/ww (16)-49d-arb.jpg' class="gallery-img" aeid="215"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="216"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="217">Заказать за <x-newprice aeid="218">1890</x-newprice> <x-currency aeid="219">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="220">Меховая шапка - Модель 17</p><img src='./files/ww (17)-aae-arb.jpg' class="gallery-img" aeid="221"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="222"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="223">Заказать за <x-newprice aeid="224">1890</x-newprice> <x-currency aeid="225">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="226">Меховая шапка - Модель 18</p><img src='./files/ww (18)-1f2-arb.jpg' class="gallery-img" aeid="227"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="228"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="229">Заказать за <x-newprice aeid="230">1890</x-newprice> <x-currency aeid="231">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="232">Меховая шапка - Модель 19</p><img src='./files/ww (19)-afe-arb.jpg' class="gallery-img" aeid="233"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="234"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="235">Заказать за <x-newprice aeid="236">1890</x-newprice> <x-currency aeid="237">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="238">Меховая шапка - Модель 20</p><img src='./files/ww (20)-d96-arb.jpg' class="gallery-img" aeid="239"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="240"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="241">Заказать за <x-newprice aeid="242">1890</x-newprice> <x-currency aeid="243">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="244">Меховая шапка - Модель 21</p><img src='./files/ww (21)-6bf-arb.jpg' class="gallery-img" aeid="245"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="246"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="247">Заказать за <x-newprice aeid="248">1890</x-newprice> <x-currency aeid="249">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="250">Меховая шапка - Модель 22</p><img src='./files/ww (22)-7d0-arb.jpg' class="gallery-img" aeid="251"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="252"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="253">Заказать за <x-newprice aeid="254">1890</x-newprice> <x-currency aeid="255">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="256">Меховая шапка - Модель 23</p><img src='./files/ww (23)-fed-arb.jpg' class="gallery-img" aeid="257"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="258"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="259">Заказать за <x-newprice aeid="260">1890</x-newprice> <x-currency aeid="261">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="262">Меховая шапка - Модель 24</p><img src='./files/ww (24)-de2-arb.jpg' class="gallery-img" aeid="263"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="264"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="265">Заказать за <x-newprice aeid="266">1890</x-newprice> <x-currency aeid="267">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="268">Меховая шапка - Модель 25</p><img src='./files/ww (25)-191-arb.jpg' class="gallery-img" aeid="269"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="270"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="271">Заказать за <x-newprice aeid="272">1890</x-newprice> <x-currency aeid="273">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="274">Меховая шапка - Модель 26</p><img src='./files/ww (26)-269-arb.jpg' class="gallery-img" aeid="275"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="276"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="277">Заказать за <x-newprice aeid="278">1890</x-newprice> <x-currency aeid="279">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="280">Меховая шапка - Модель 27</p><img src='./files/ww (27)-d94-arb.jpg' class="gallery-img" aeid="281"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="282"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="283">Заказать за <x-newprice aeid="284">1890</x-newprice> <x-currency aeid="285">руб</x-currency>.</a></div>
+<p style="color: black; margin-top: 40px; text-align: center; font-size:30px;" aeid="286">Меховая шапка - Модель 28</p><img src='./files/ww (28)-166-arb.jpg' class="gallery-img" aeid="287"><div class="col-sm-12 text-center mt wow tada mb" style="margin-top:-10px;" aeid="288"> <a  href="#modal-form" data-fancybox class="btn btn-lg btn-custom big add_to_cart"  aeid="289">Заказать за <x-newprice aeid="290">1890</x-newprice> <x-currency aeid="291">руб</x-currency>.</a></div>
+                            </center>                            <p aeid="292"></p>
+                            <div class="row" aeid="293">
+                                <div class="col-sm-12 text-center mt wow tada mb" aeid="294"><a href="#modal-form" data-fancybox class="btn btn-lg btn-custom big" aeid="295">Хочу такую шапку</a></div>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="test" class="comment" aeid="296">
+            <div class="container" aeid="297">
+                <div class="row" aeid="298">
+                    <div class="col-sm-12" aeid="299">
+                        <h2 class="text-center wow fadeInDown" aeid="300"><b aeid="301">Отзывы</b></h2>
+                        <!-- комментарий -->
+                        <div class="row comment-body wow fadeInDown" aeid="302">
+                            <div class="col-sm-3 text-center" aeid="303">
+                                <!-- картинка и имя автора -->
+                                <img src='./files/ava5-bd6-arb.png' alt="" class="img-responsive img-circle center-block mb" aeid="304">
+                                <h4 aeid="305">Лилия Ковалева	</h4>
+                                <!-- картинка и имя автора -->
+                            </div>
+                            <div class="col-sm-9" aeid="306">
+                                <!-- тело комментария -->
+                                <h3 aeid="307">Рязань:</h3>
+                                <p aeid="308">
+                                    На голове села отлично! Качество так же на высоте. Доставили за 6 дней. Покупкой осталась очень довольна. СПАСИБО!                                </p>                                <!-- тело комментария -->
+                            </div>
+                        </div>                    </div>
+                </div>
+                <!-- комментарий -->                <!-- комментарий -->
+                <div class="row comment-body wow fadeInDown" aeid="309">
+                    <div class="col-sm-3 text-center" aeid="310">
+                        <!-- картинка и имя автора -->
+                        <img src='./files/ava3-5a9-arb.png' alt="" class="img-responsive img-circle center-block mb" aeid="311">
+                        <h4 aeid="312">Евгения Крюкова</h4>
+                        <!-- картинка и имя автора -->
+                    </div>
+                    <div class="col-sm-9" aeid="313">
+                        <!-- тело комментария -->
+                        <h3 aeid="314">Самара:</h3>
+                        <p aeid="315">Шапочка просто КЛАСС!!! Полностью соотвествует фото. села идеально. Заказ пришел быстро. Рекомендую всем!
+                            <!-- тело комментария -->
+                        </p>
+                    </div>
+                </div>                <div class="row comment-body wow fadeInDown" aeid="316">
+                    <div class="col-sm-3 text-center" aeid="317">
+                        <!-- картинка и имя автора -->
+                        <img src='./files/ava1-c26-arb.png' alt="" class="img-responsive img-circle center-block mb" aeid="318">
+                        <h4 aeid="319">Наталья Игорева</h4>
+                        <!-- картинка и имя автора -->
+                    </div>
+                    <div class="col-sm-9" aeid="320">
+                        <!-- тело комментария -->
+                        <h3 aeid="321">Нижний Новгород:</h3>
+                        <p aeid="322">
+                            Купила шапку, качество отличное, кролик. Хорошо тянется, удобно сидит на голове. Смотрится так же красиво и стильно. Рекомендую!!
+                        </p>                        <!-- тело комментария -->
+                    </div>
+                </div>
+                <!-- комментарий -->                <!-- комментарий -->
+                <div class="row comment-body wow fadeInDown" aeid="323">
+                    <div class="col-sm-3 text-center" aeid="324">
+                        <!-- картинка и имя автора -->
+                        <img src='./files/ava6-39d-arb.png' alt="" class="img-responsive img-circle center-block mb" aeid="325">
+                        <h4 aeid="326">Светлана Назарова</h4>
+                        <!-- картинка и имя автора -->
+                    </div>
+                    <div class="col-sm-9" aeid="327">
+                        <!-- тело комментария -->
+                        <h3 aeid="328">Воронеж:</h3>
+                        <p aeid="329">Шапка прелесть. Пушистая, мягкая, теплая. Посторонних запахов нету, все как в описании. Можно заказывать </p>                        <!-- тело комментария -->
+                    </div>
+                </div>            </div>        </section>
+        <section aeid="330">
+            <div class="container" aeid="331">
+                <div class="row" aeid="332">
+                    <div class="col-sm-10 col-sm-offset-1" aeid="333">
+                        <h2 class="text-center wow fadeInDown" aeid="334"><b aeid="335">Акция</b></h2>
+                        <div class="row" aeid="336">
+                            <div class="col-sm-6" aeid="337"><img src='./files/offer_1-f00-arb.png' alt="" class="img-responsive img-rounded shadow center-block mb" aeid="338"></div>
+                            <div class="col-sm-6 mob-center" aeid="339">
+                                <h3 class="wow bounceInRight text-danger" aeid="340"><b aeid="341">Внимание</b></h3>
+                                <h3 class="wow bounceInRight" aeid="342">Скидка - 53% </h3>
+                                <del class="wow bounceInRight" aeid="343">Старая цена: <x-oldprice aeid="344"><x-oldprice aeid="345">3780</x-oldprice></x-oldprice> <x-currency aeid="346"><x-currency aeid="347">руб</x-currency></x-currency></del>
+                                <h3 class="wow bounceInRight text-success mb mt" aeid="348"><b aeid="349">Новая цена: <x-newprice aeid="350"><x-newprice aeid="351">1890</x-newprice></x-newprice> <x-currency aeid="352"><x-currency aeid="353">руб</x-currency></x-currency></b></h3>
+                                <p class="wow bounceInRight" aeid="354">Всего один клик и она ваша!
+                                    <br>
+                                </p>
+                                <div class="eTimer wow bounceInRight" aeid="355"></div>
+                                <div class="mt wow bounceInRight" aeid="356"><a href="#modal-form" data-fancybox class="btn btn-lg btn-custom" aeid="357">Заказать шапку со скидкой</a></div>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="delivery" class="grey" aeid="358">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;" xml:space="preserve" aeid="359">
+                <g aeid="360">
+                    <path d="M296.423,490.653c-36.927,0-66.769,29.949-66.769,66.876c0,36.819,29.842,66.769,66.769,66.769s66.768-29.95,66.768-66.769
+		C363.191,520.602,333.35,490.653,296.423,490.653z M296.423,590.913c-18.464,0-33.385-15.029-33.385-33.385
+		c0-18.463,14.921-33.384,33.385-33.384c18.463,0,33.384,14.921,33.384,33.384C329.807,575.885,314.886,590.913,296.423,590.913z
+		 M800,441.257v71.294c0,17.786-14.418,32.203-32.203,32.203h-34.458c-6.226-42.723-43.045-75.571-87.486-75.571
+		c-44.333,0-81.153,32.848-87.379,75.571h-174.65c-6.226-42.723-43.045-75.571-87.379-75.571c-44.333,0-81.153,32.848-87.378,75.571
+		h-43.153c-17.786,0-32.203-14.418-32.203-32.203v-71.294H800z M645.938,490.653c-36.927,0-66.876,29.949-66.876,66.876
+		c0,36.819,29.95,66.769,66.876,66.769c36.819,0,66.768-29.95,66.768-66.769C712.706,520.602,682.757,490.653,645.938,490.653z
+		 M645.938,590.913c-18.464,0-33.385-15.029-33.385-33.385c0-18.463,14.921-33.384,33.385-33.384
+		c18.356,0,33.384,14.921,33.384,33.384C679.322,575.885,664.294,590.913,645.938,590.913z M787.311,369.461L660.752,244.296
+		c-8.051-7.943-18.893-12.452-30.164-12.452h-63.87v-23.938c0-17.819-14.385-32.203-32.203-32.203H165.891
+		c-17.712,0-32.203,14.385-32.203,32.203v5.046L3.007,228.012l231.563,30.154L0,281.468l233.744,33.233L0,334.968l133.697,25.216
+		l-0.009,63.271h666.29v-23.509C799.978,388.46,795.362,377.512,787.311,369.461z M732.136,373.647h-122.48
+		c-2.791,0-5.046-2.254-5.046-5.045v-94.571c0-2.791,2.254-5.046,5.046-5.046h23.294c1.288,0,2.576,0.537,3.543,1.396l99.079,94.571
+		C738.898,368.065,736.644,373.647,732.136,373.647z" aeid="361"></path>
+                </g>
+            </svg>            <div class="container" aeid="362">
+                <div class="row" aeid="363">
+                    <div class="col-sm-12" aeid="364">
+                        <h2 class="text-center wow fadeInDown" aeid="365"><b aeid="366">Доставка и оплата</b></h2>
+                        <div class="text-center" aeid="367">
+                            <h3 aeid="368"><b aeid="369">Доставка осуществляется службой:</b></h3>
+                            <p aeid="370">Мы вам доверяем и не требуем с вас предоплаты.</p>
+                            <p aeid="371">Мы уважаем ваше время, и поэтому все дневные заказы отправляем в день заказа, вечерние - на следующий день.</p>
+                            <p aeid="372">Вы можете забрать и оплатить свой заказ в отделении "Почты России" в любое удобное для вас время</p>
+                            <p aeid="373">Также просим Вас учесть, что посылка хранится на складе "Почты России" не более 5 дней, с момента прибытия на склад.</p>
+                        </div>                        <div class="visible-xs text-center" aeid="374">
+                            <h4 aeid="375"><b aeid="376">Стоимость доставки Почтой</b></h4>
+                            <p aeid="377">Стоимость доставки составляет в среднем 350-400р (может быть больше или меньше в зависимости от Вашего региона).</p>
+                            <h4 aeid="378"><b aeid="379">Сроки доставки</b></h4>
+                            <p aeid="380">Мы отправлим ваш заказ уже сегодня 1 классом.</p>
+                            <p aeid="381">Заказ дойдёт до вас быстро и без единой царапинки.</p>
+                            <p aeid="382">Доставка займет 4-7 рабочих дней.</p>
+                            <p aeid="383">Чтобы ускорить прибытие вашего заказа, мы отправляем бандероли два раза в день, включая выходные дни.</p>
+                            <h4 aeid="384"><b aeid="385">Оплата заказа наложенным платежом</b></h4>
+                            <p aeid="386">Оплата осуществляется в почтовом отделении при получении заказа.</p>                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="guaranry" aeid="387">
+            <div class="container" aeid="388">
+                <div class="row" aeid="389">
+                    <div class="col-sm-12 text-center" aeid="390">
+                        <h2 class="text-center wow fadeInDown" aeid="391"><b aeid="392">Гарантии</b></h2>
+                        <div class="row" aeid="393">
+                            <div class="col-sm-4 wow fadeInDown" aeid="394">
+                                <h4 aeid="395"><b aeid="396">Оплата при получении</b></h4><img src='./files/guarantee_1-7eb-arb.gif' alt="" class="img-responsive center-block mb" aeid="397">
+                                <p aeid="398">Мы не берем с вас предоплату.</p>
+                                <p aeid="399">Оплата заказа осуществляется при получении в отделении "Почты России"</p>
+                            </div>
+                            <div class="col-sm-4 wow fadeInDown" aeid="400">
+                                <h4 aeid="401"><b aeid="402">Гарантии на товар</b></h4>
+                                <p aeid="403">Перед отправкой товары проходят 100% проверку.</p>                            </div>
+                            <div class="col-sm-4 wow fadeInDown" aeid="404">
+                                <h4 aeid="405"><b aeid="406">Возврат денег</b></h4><img src='./files/guarantee_2-d8c-arb.gif' alt="" class="img-responsive center-block mb" aeid="407">
+                                <p aeid="408">Свяжитесь с нами и мы решим ваш вопрос</p>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        <section id="buy" aeid="409">
+            <div class="container" aeid="410">
+                <div class="row" aeid="411">
+                    <div class="col-sm-10 col-sm-offset-1" aeid="412">
+                        <h2 class="text-center" aeid="413"><b aeid="414">СКИДКА - 53%</b></h2>
+                        <div class="row" aeid="415">
+                            <div class="col-sm-6" aeid="416"><img src='./files/offer_2-93d-arb.jpg' alt="" class="img-responsive img-rounded shadow center-block mb" aeid="417"></div>
+                            <div class="col-sm-6 mob-center" aeid="418">
+                                <h3 class="wow bounceInRight text-danger" aeid="419"><b aeid="420">Внимание</b></h3>
+                                <h3 class="wow bounceInRight" aeid="421">Скидка - 53%</h3>
+                                <del class="wow bounceInRight" aeid="422">Старая цена: <x-oldprice aeid="423"><x-oldprice aeid="424">3780</x-oldprice></x-oldprice> <x-currency aeid="425"><x-currency aeid="426">руб</x-currency></x-currency></del>
+                                <h3 class="wow bounceInRight text-success mb mt" aeid="427"><b aeid="428">Новая цена: <x-newprice aeid="429"><x-newprice aeid="430">1890</x-newprice></x-newprice> <x-currency aeid="431"><x-currency aeid="432">руб</x-currency></x-currency></b></h3>
+                                <p class="wow bounceInRight" aeid="433">Очень выгодная цена!
+                                </p>
+                                <div class="eTimer wow bounceInRight" aeid="434"></div>
+                                <div class="mt wow bounceInRight" aeid="435"><a href="#modal-form" data-fancybox class="btn btn-lg btn-custom" aeid="436">Для заказа нажмите ТУТ</a></div>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="mob-center" aeid="437">
+            <center aeid="438">
+              <p aeid="439">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ОТДЕЛ ПРОДАЖ" ОГРН: 1172225014840 ИНН: 2222857400 КПП: 222201001</p>
+<p aeid="440">656054 АЛТАЙСКИЙ КРАЙ ГОРОД БАРНАУЛ УЛИЦА АНТОНА ПЕТРОВА ДОМ 219А ОФИС 232</p>   
+    
+    
+            <p class="conf-link doclinks" aeid="441">
+        <a class="nav-link"  href="" onclick="window.open('/policy2.php'); return false;" aeid="442">Политика конфиденциальности </a>
+      </p>
+      
+<!--       <p class="policy-link doclinks"> -->
+<!--         <a class="nav-link"  href="" onclick="window.open('/policy2.php'); return false;">Условия оформления заказа</a> -->
+<!--       </p> -->    
+            </center>            <style>
+                .unprocessed-orders {
+                    text-align: center;
+                }
+                
+                .unprocessed-orders .info-label {
+                    margin-top: 15px;
+                    display: block;
+                }
+                
+                .unprocessed-orders .order-button {
+                    display: inline-block;
+                    vertical-align: top;
+                    padding: 15px 30px;
+                    border: 1px solid #74a3c7;
+                    text-align: center;
+                    color: #5087b2;
+                    font-size: 15px;
+                    line-height: 18px;
+                    border-radius: 30px;
+                    margin: 10px 5px;
+                }
+                
+                .prepay-link-block {
+                    text-align: center;
+                    padding: 5px 5px 10px;
+                }
+                
+                .prepay-link-block a {
+                    color: inherit;
+                    font-size: inherit;
+                }
+            </style>            <style>
+                #offer-block {
+                    text-align: center
+                }
+                
+                #offer-block-link {
+                    color: inherit
+                }
+            </style>        </footer>        <link rel="stylesheet" href='./files/style_002-d83-arb.css' type="text/css">        <style>
+            select {
+                height: 46px !important;
+                padding: 10px 16px !important;
+                font-size: 18px !important;
+                line-height: 1.33 !important;
+                border-radius: 6px !important;
+                display: block;
+                width: 100%;
+                color: #555;
+                background-color: #fff;
+                background-image: none;
+                border: 1px solid #ccc;
+                /* border-radius: 4px; */
+                -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+                -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                margin: 15px 0;
+            }
+            
+            input {
+                margin: 15px 0;
+            }
+        </style>
+        <script  type="text/javascript">
+            $(document).ready(function() {
+                $('a[href^="#"]:not([data-fancybox])').on('click', function(e) {
+                    e.preventDefault();                    var target = this.hash;
+                    var $target = $(target);                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top
+                    }, 900, 'swing', function() {
+                        window.location.hash = target;
+                    });
+                });
+            });
+        </script>        <section class="section-hidden" style="display: none;" aeid="443">
+            <div id="modal-form" aeid="444">
+                <form method="post" name="order_form" action="https://cpa78.info/lead/e45d2811c2505b784c56db151d8168bf" class="wow bounceInRight" id="unic_form" aeid="445">
+                   
+                    <legend class="text-center text-uppercase" style="margin-top:-20px;" aeid="446"><strong aeid="447">	<br>Заказать сейчас за <br> <span style="color:#ff0000" aeid="448"> <font size="14" aeid="449"><x-newprice aeid="450"><x-newprice aeid="451">1890</x-newprice></x-newprice> </font> <x-currency aeid="452"><x-currency aeid="453">руб</x-currency></x-currency> </span></strong> </legend>                    <div class="inp_wrap" aeid="454">
+                                 <input name="csrf_token" type="hidden" value="358d7b1b830c97694f869b685201025c:1605015712" / aeid="455">
+    <select name="offer" class="form-control country_chang" aeid="456">
+                <option 
+            data-country-code="RU"
+                        selected="selected"
+                        value="20079"
+         aeid="457">
+            Россия        </option>
+            </select>
+                                  <select name="product_id" class="form-control" aeid="458">
+                                  <option value="Выберите модель" selected="" aeid="459">Выберите модель</option>  
+                                                     <option value="Модель 1" aeid="460">Модель 1</option>
+                                                     <option value="Модель 2" aeid="461">Модель 2</option>
+                                                     <option value="Модель 3" aeid="462">Модель 3</option>
+                                                     <option value="Модель 4" aeid="463">Модель 4</option>
+                                                     <option value="Модель 5" aeid="464">Модель 5</option>
+                                                     <option value="Модель 6" aeid="465">Модель 6</option>
+                                                     <option value="Модель 7" aeid="466">Модель 7</option>
+                                                     <option value="Модель 8" aeid="467">Модель 8</option>
+                                                     <option value="Модель 9" aeid="468">Модель 9</option>
+                                                     <option value="Модель 10" aeid="469">Модель 10</option>
+                                                     <option value="Модель 11" aeid="470">Модель 11</option>
+                                                     <option value="Модель 12" aeid="471">Модель 12</option>
+                                                     <option value="Модель 13" aeid="472">Модель 13</option>
+                                                     <option value="Модель 14" aeid="473">Модель 14</option>
+                                                     <option value="Модель 15" aeid="474">Модель 15</option>
+                                                     <option value="Модель 16" aeid="475">Модель 16</option>
+                                                     <option value="Модель 17" aeid="476">Модель 17</option>
+                                                     <option value="Модель 18" aeid="477">Модель 18</option>
+                                                     <option value="Модель 19" aeid="478">Модель 19</option>
+                                                     <option value="Модель 20" aeid="479">Модель 20</option>
+                                                     <option value="Модель 21" aeid="480">Модель 21</option>
+                                                     <option value="Модель 22" aeid="481">Модель 22</option>
+                                                     <option value="Модель 23" aeid="482">Модель 23</option>
+                                                     <option value="Модель 24" aeid="483">Модель 24</option>
+                                                     <option value="Модель 25" aeid="484">Модель 25</option>
+                                                     <option value="Модель 26" aeid="485">Модель 26</option>
+                                                     <option value="Модель 27" aeid="486">Модель 27</option>
+                                                     <option value="Модель 28" aeid="487">Модель 28</option>
+                                                  </select>
+                            <input placeholder="Введите Ваше Имя*" name="name" required  class="form-control input-lg" type="text" aeid="488">
+                            <input placeholder="Введите Ваш Телефон*" id="contact_tel" name="phone" required  class="form-control input-lg" type="text" aeid="489">     <input type="hidden" name="comments" value="Модель не выбрана" aeid="490">                    </div>
+                    <br>
+                    <center aeid="491">
+                        <button type="submit" class="btn btn-lg btn-custom big" aeid="492"><span aeid="493"> Заказать шапку </span></button>
+                    </center>
+<center aeid="494">*доступные цвета и размеры уточняйте у менеджера </center>
+                </form>
+            </div>
+        </section>
+        <style>
+            .form-control{
+                height: 46px;
+                font-size: 18px;
+                line-height: 1.33;
+                padding: 10px 16px;
+                border-radius: 6px;
+            }
+        </style>
+<script >
+   //передача артикулов в форму
+   $(".add_to_cart").click(function(event) {
+      var title = $(this).parent().prev().prev().text().trim().replace('Меховая шапка - ', '');;
+      console.log(title);
+      $('input[name="comments"]').val(title);
+      $('select option[value="'+title+'"]').prop('selected', true);
+   });    $('select[name="product_id"]').change(function () {
+        var art = $(this).children('option:selected').text();
+        $('input[name="comments"]').val(art);
+    });
+</script>    <script src="https://cpa78.info/track.js" hash="e45d2811c2505b784c56db151d8168bf" id="wildo"></script>
+</body>    </html>
